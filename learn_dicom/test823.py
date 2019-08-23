@@ -152,10 +152,10 @@ def coordinate_transform(input_path):
         # for i, j in zip(apex_coordinate, xy_coordinate):
         #     temp.append(i + j)
         for i in range(2):
-            if i == 0:
-                temp.append(apex_coordinate[i] + xy_coordinate[i])
-            elif i == 1:
-                temp.append(-apex_coordinate[i] + xy_coordinate[i])
+            # if i == 0:
+            temp.append(apex_coordinate[i] + xy_coordinate[i])
+            # elif i == 1:
+            #     temp.append(apex_coordinate[i] + xy_coordinate[i])
         four_apex_list_last.append(temp)
     return four_apex_list_last
 
@@ -180,5 +180,8 @@ if __name__ == '__main__':
 
 # 由该函数得出的结论与实际不符，所以坐标的相对位置概念需要进行修正
 # todo:一个是从series中提取到初始图层的position
+# todo:缩放的对应，根据产生打的坐标生成一个图像截取和缩放的比例
+# todo:实验opencv图像缩放后的效果
+
 
 # todo:周报
